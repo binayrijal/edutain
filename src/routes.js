@@ -22,6 +22,7 @@ import QuizCont from './components/QuizCont.vue'
 import AngleCont from './components/AngleCont.vue'
 import AnimationVideo from './components/AnimationVideo.vue'
 import ChangePassword from './components/ChangePassword.vue'
+import EightYoutube from './components/EightYoutube.vue'
 
 // import PdfCont from './components/PdfCont.vue'
 
@@ -141,6 +142,11 @@ const routes=[
         path: '/change-password',
         name: 'ChangePassword',
         component: ChangePassword
+    },
+    {
+        path: '/eight-youtube',
+        name: 'EightYoutube',
+        component: EightYoutube
     },
     // {
     //     path: '/pdf-cont',
