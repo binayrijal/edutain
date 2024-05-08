@@ -21,6 +21,7 @@ import TimeCont from './components/TimeCont.vue'
 import QuizCont from './components/QuizCont.vue'
 import AngleCont from './components/AngleCont.vue'
 import AnimationVideo from './components/AnimationVideo.vue'
+import ChangePassword from './components/ChangePassword.vue'
 
 // import PdfCont from './components/PdfCont.vue'
 
@@ -135,6 +136,11 @@ const routes=[
         path: '/animation-video',
         name: 'AnimationVideo',
         component: AnimationVideo
+    },
+    {
+        path: '/change-password',
+        name: 'ChangePassword',
+        component: ChangePassword
     },
     // {
     //     path: '/pdf-cont',

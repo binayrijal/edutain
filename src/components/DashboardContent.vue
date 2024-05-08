@@ -14,7 +14,7 @@
         <nav class="nav">
             <router-link to="/" class="nav-item">Home</router-link>
             <router-link to="/dashboard" class="nav-item">Dashboard</router-link>
-            <router-link to="/profile" class="nav-item">ChangePassword</router-link>
+            <router-link to="/change-password" class="nav-item">ChangePassword</router-link>
             <button @click="showProgressReport = true" class="nav-item">Generate Report</button>
             <a href="login" class="nav-item" v-on:click="logout">Logout</a>
             
