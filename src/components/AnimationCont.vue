@@ -16,8 +16,8 @@
     data() {
       return {
         videos: [
-          { src: require('../assets/video-hydro.mp4'), title: 'Video 1 Hydro-carbon' },
-          { src: require('../assets/STEAMDEMO.mp4') , title: 'Video 2 Polygon'},
+          // { src: require('../assets/video-hydro.mp4'), title: 'Video 1 Hydro-carbon' },
+          // { src: require('../assets/STEAMDEMO.mp4') , title: 'Video 2 Polygon'},
           // Add more video objects as needed
         ]
       };
