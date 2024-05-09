@@ -1,19 +1,36 @@
 <template>
-<img src="../assets/Emblem_of_Nepal.svg (1).png" />
-<h1>
-    Sign UP
-</h1>
-<div class="register">
-    <input type="text" v-model="name" placeholder="enter name" />
-    <input type="text" v-model="email" placeholder="enter email" />
-    <input type="password" v-model="password" placeholder="enter password" />
-    <input type="password" v-model="password2" placeholder="enter password again" />
 
-    <button class="submit" v-on:click="singup()">Sign-Up</button>
-    <p>
-        <router-link to="/login">login</router-link>
-    </p>
-</div>
+    <div class="register container">
+        <img src="../assets/Emblem_of_Nepal.svg (1).png" />
+        <h3 style="color:black,">
+            Welcome to Edutain Nepal!
+        </h3>
+        <div class="did-floating-label-content">
+            <input type="text" v-model="name" class="did-floating-input" placeholder="" />
+            <label class="did-floating-label">Full Name</label>
+        </div>
+        <div class="did-floating-label-content">
+            <input type="text" v-model="email" placeholder="" class="did-floating-input" />
+            <label class="did-floating-label">Email <span style="color:red,">*</span> </label>
+        </div>
+        <div class="did-floating-label-content">
+            <input type="password" v-model="password" class="did-floating-input" placeholder="" />
+            <label class="did-floating-label">Password <span style="color:red,">*</span> </label>
+        </div>
+
+        <div class="did-floating-label-content ">
+            <input type="password" v-model="password2" class="did-floating-input" placeholder="" />
+            <label class="did-floating-label">Re-enter Password <span style="color:red,">*</span> </label>
+        </div>
+
+
+        <button class="submit" v-on:click="singup()">Sign-Up</button>
+        <div style="font-size: xx-small; margin-top: 10px;">OR <span style="font-size: xx-small;">Don't Have any account?</span>
+        </div>
+        <p style="display: flex; justify-content: center; align-items: center; text-decoration: none; color:black">
+            <router-link style="text-decoration: none; margin-top:4px;" to="/login">login</router-link>
+        </p>
+    </div>
 </template>
 
 <script>
@@ -51,15 +68,15 @@ export default {
                     password2: this.password2
                 })
                 if (value.status == 201) {
-                    const userdata={
-                        name:value.data.name,
-                        email:value.data.email
+                    const userdata = {
+                        name: value.data.name,
+                        email: value.data.email
                     }
                     localStorage.setItem("user-value", JSON.stringify(userdata.data))
                     this.name = '',
-                    this.email = '',
-                    this.password = '',
-                    this.password2 = ''
+                        this.email = '',
+                        this.password = '',
+                        this.password2 = ''
                     alert('Registration successfull!login now:')
 
                 }
@@ -82,6 +99,4 @@ export default {
 }
 </script>
 
-<style >
-
-</style>
+<style></style>
