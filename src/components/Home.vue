@@ -101,12 +101,12 @@ export default {
     methods: {
         fetchUserData() {
             const authToken = JSON.parse(localStorage.getItem("user-value"));
-            if (!authToken || !authToken.access) {
-                this.$router.push({
-                    name: 'signUp',
-                });
-                return;
-            }
+            // if (!authToken || !authToken.access) {
+            //     this.$router.push({
+            //         name: 'signUp',
+            //     });
+            //     return;
+            // }
             axios.get('http://localhost:8000/api/profile/', {
                     headers: {
                         'Authorization': `Bearer ${authToken.access}`
