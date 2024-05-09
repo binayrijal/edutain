@@ -17,8 +17,6 @@
     data() {
       return {
         videos: [
-          { src: require('../assets/video-hydro.mp4'), title: 'Hydro-carbon' },
-          { src: require('../assets/STEAMDEMO.mp4') , title: 'Polygon'},
           { src: require('../assets/Class_8Phases_of_the_Moon_.mp4'), title: 'Phases_of_the_Moon' },
           { src: require('../assets/Coin_and_Feather_Experiment_1.mp4') , title: 'Coin_and_Feather_Experiment'},
           { src: require('../assets/Edutains_Astronomy-Class_7.mp4'), title: 'Edutains_Astronomy' },
