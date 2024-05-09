@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="login" style="margin-top: 100px;">
+    <div class="login" style="margin-top: 150px">
       <img src="../assets/student-logo-vector.jpg" />
-      <h1>Welcome Back!</h1>
+      <h3 style="color: black">Welcome Back!</h3>
       <div class="did-floating-label-content">
         <input
           type="text"
@@ -24,13 +24,17 @@
         <label class="did-floating-label">password</label>
       </div>
 
-      <button class="submit" v-on:click="login()">Login</button>
-      <p>
-        <router-link to="/signup">Signup</router-link>
-      </p>
-      <p>
-        <router-link to="/forgot-password">Forgot Password?</router-link>
-      </p>
+      <button class="submit" v-on:click="login()" style="color:white;">Login</button>
+      <div style="display: flex; justify-content: space-between; gap: 100px;" >
+        <p>
+          <router-link to="/signup">Signup</router-link>
+        </p>
+        <p>
+          <router-link to="/forgot-password" style="color: black"
+            >Forgot Password?</router-link
+          >
+        </p>
+      </div>
     </div>
   </div>
 </template>

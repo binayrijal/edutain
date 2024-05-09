@@ -1,8 +1,17 @@
 <template>
-  <div>
-    <h1>Forgot Password</h1>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 200px;">
     <div v-if="!emailSent" class="forgot-password">
-      <input type="email" v-model="email" placeholder="Enter your email" />
+      <h3 >Forgot Password</h3>
+      <div class="did-floating-label-content">
+        <input
+          type="email"
+          v-model="email"
+          class="did-floating-input"
+          placeholder=""
+        />
+
+        <label class="did-floating-label">Email</label>
+      </div>
       <button class="submit" @click="sendResetEmail">Send Reset Email</button>
     </div>
     <div v-else>
@@ -12,26 +21,29 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
-  name:'ForgetPassword',
+  name: "ForgetPassword",
   data() {
     return {
-      email: '',
+      email: "",
       emailSent: false,
     };
   },
   methods: {
     async sendResetEmail() {
       try {
-        await axios.post('http://localhost:8000/api/send-mail-reset-password/', {
-          email: this.email,
-        });
+        await axios.post(
+          "http://localhost:8000/api/send-mail-reset-password/",
+          {
+            email: this.email,
+          }
+        );
         this.emailSent = true;
       } catch (error) {
-        console.error('Error sending reset email:', error);
-        alert('Failed to send reset email. Please try again.');
+        console.error("Error sending reset email:", error);
+        alert("Failed to send reset email. Please try again.");
       }
     },
   },
