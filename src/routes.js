@@ -17,7 +17,6 @@ import ForgotPassword from './components/ForgotPassword.vue'
 import PasswordReset from './components/PasswordReset.vue'
 import DashboardContent from './components/DashboardContent.vue'
 import GameCom from './components/GameCom.vue'
-import TimeCont from './components/TimeCont.vue'
 import QuizCont from './components/QuizCont.vue'
 import AngleCont from './components/AngleCont.vue'
 import AnimationVideo from './components/AnimationVideo.vue'
@@ -117,11 +116,6 @@ const routes=[
         path: '/game-com',
         name: 'GameCom',
         component: GameCom
-    },
-    {
-        path: '/time-cont',
-        name: 'TimeCont',
-        component: TimeCont
     },
     {
         path: '/quiz-cont',
