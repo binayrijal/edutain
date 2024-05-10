@@ -93,7 +93,7 @@ export default {
 
       // }
       try {
-        let value = await axios.post("http://localhost:8000/api/register/", {
+        let value = await axios.post("http://edutainnp.pythonanywhere.com/api/register/", {
           name: this.name,
           email: this.email,
           password: this.password,

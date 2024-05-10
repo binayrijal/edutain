@@ -14,6 +14,7 @@
         <label class="did-floating-label">Email</label>
       </div>
       <div class="did-floating-label-content">
+
         <input
           type="password"
           v-model="password"
@@ -25,15 +26,18 @@
       </div>
 
       <button class="submit" v-on:click="login()" style="color:white;">Login</button>
+
       <div style="display: flex; justify-content: space-between; gap: 100px;" >
         <p>
           <router-link to="/signup">Signup</router-link>
         </p>
+
         <p>
           <router-link to="/forgot-password" style="color: black"
             >Forgot Password?</router-link
           >
         </p>
+        
       </div>
     </div>
   </div>
@@ -51,19 +55,9 @@ export default {
   },
   methods: {
     async login() {
-      // let value = await axios.get(
-      //     `http://localhost:3000/api/login?email=${this.email}&password=${this.password}`
-      // )
-      // if (value.status == 200 && value.data.length>0) {
 
-      //     localStorage.setItem("user-value", JSON.stringify(value.data.token))
-      //     this.$router.push({
-      //         name: 'HomePage'
-      //     })
-
-      // }
       try {
-        let value = await axios.post("http://localhost:8000/api/login/", {
+        let value = await axios.post("http://edutainnp.pythonanywhere.com/api/login/", {
           email: this.email,
           password: this.password,
         });
