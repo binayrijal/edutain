@@ -1,4 +1,4 @@
-# restro-app
+# Edutain Nepal
 
 ## Project setup
 ```
