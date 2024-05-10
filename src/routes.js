@@ -17,11 +17,12 @@ import ForgotPassword from './components/ForgotPassword.vue'
 import PasswordReset from './components/PasswordReset.vue'
 import DashboardContent from './components/DashboardContent.vue'
 import GameCom from './components/GameCom.vue'
-import QuizCont from './components/QuizCont.vue'
+import QuizTen from './components/QuizTen.vue'
 import AngleCont from './components/AngleCont.vue'
 import AnimationVideo from './components/AnimationVideo.vue'
 import ChangePassword from './components/ChangePassword.vue'
 import EightYoutube from './components/EightYoutube.vue'
+import QuizSeven from './components/QuizSeven.vue'
 
 // import PdfCont from './components/PdfCont.vue'
 
@@ -118,9 +119,9 @@ const routes=[
         component: GameCom
     },
     {
-        path: '/quiz-cont',
-        name: 'QuizCont',
-        component: QuizCont
+        path: '/quiz-ten',
+        name: 'QuizTen',
+        component: QuizTen
     },
     {
         path: '/angle-cont',
@@ -142,6 +143,11 @@ const routes=[
         name: 'EightYoutube',
         component: EightYoutube
     },
+    {
+        path:'/quiz-seven',
+        name:'QuizSeven',
+        component:QuizSeven
+    }
     // {
     //     path: '/pdf-cont',
     //     name: 'PdfCont',

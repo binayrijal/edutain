@@ -16,17 +16,6 @@
           'https://www.youtube.com/embed/JqRl0cDBGeI',
           'https://www.youtube.com/embed/GcAWYSc369w',
           'https://www.youtube.com/embed/2BerWwuJmrg',
-          'https://youtube.com/embed/kr7f3MeAyOk',
-          'https://www.youtube.com/embed/YaahukWgC7Y',
-          'https://www.youtube.com/embed/sQWrYY555II',
-          'https://www.youtube.com/embed/82EvWpWSogM',
-          'https://www.youtube.com/embed/-lgYPgpEXEs',
-          'https://www.youtube.com/embed/vOjh-9aDa4o',
-          'https://www.youtube.com/embed/vOjh-9aDa4o',
-          'https://www.youtube.com/embed/zRJtXkHil2o',
-          'https://www.youtube.com/embed/HCbisGApCy4',
-          'https://www.youtube.com/embed/96lOJ-QwFsw',
-          'https://www.youtube.com/embed/U3AWs1nC5I4'
         ]
       };
     }
@@ -51,4 +40,3 @@
     height: 100%;
   }
   </style>
-  
