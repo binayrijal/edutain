@@ -6,7 +6,7 @@
             <div class="profile-detail">
 
                 <p>welcome:{{name }}</p>
-                <p>Email:{{ email }}</p>
+                <p>{{ email }}</p>
                 <!-- <p>Time:{{ timeSpentInSeconds }}</p> -->
             </div>
         </div>
@@ -68,7 +68,7 @@
                     });
                     return;
                 }
-                axios.get('http://localhost:8000/api/profile/', {
+                axios.get('http://edutainnp.pythonanywhere.com/api/profile/', {
                         headers: {
                             'Authorization': `Bearer ${authToken.access}`
                         }
