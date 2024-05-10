@@ -79,20 +79,17 @@
     </div>
     <div class="result">
       <p>Time:{{ timeSpentInSeconds }}</p>
+      <p>Streak: {{streak}}🔥</p> <!-- Display the streak count -->
+
       <PieChart v-if="selectedOption === 'drawchart'" />
       <TriangleGen v-else-if="selectedOption === 'drawtriangle'"></TriangleGen>
       <TrigonometryGen
         v-else-if="selectedOption === 'drawtrigo'"
       ></TrigonometryGen>
-      <ClassContent
-        v-else-if="
-          selectedOption === '7' ||
-          selectedOption === '8' ||
-          selectedOption === '9' ||
-          selectedOption === '10'
-        "
-        :selectedOption="selectedOption"
-      />
+      <Class7Content v-else-if="selectedOption === '7' " :selectedOption="selectedOption"/>
+      <Class8Content v-else-if="selectedOption === '8' " :selectedOption="selectedOption"/>
+      <Class9Content v-else-if="selectedOption === '9' " :selectedOption="selectedOption"/>
+      <ClassContent v-else-if="selectedOption === '10' " :selectedOption="selectedOption"/>
       <AnimationCont v-else-if="selectedOption === 'animation'"></AnimationCont>
       <SolarSys v-else-if="selectedOption === 'solar'"></SolarSys>
       <ThreeDee v-else-if="selectedOption === 'cube'"></ThreeDee>
@@ -109,9 +106,11 @@
     </div>
   </div>
 </template>
-
 <script>
     import ClassContent from './ClassContent.vue';
+    import Class7Content from './Class7Content.vue';
+    import Class8Content from './Class8Content.vue';
+    import Class9Content from './Class9Content.vue'
     import HeaderCom from './HeaderCom.vue';
     import PieChart from './PieChart.vue'; // Import your PieChart component here
     import AnimationCont from './AnimationCont.vue'
@@ -142,6 +141,9 @@
             GameCom,
             TikTok,
             AngleCont,
+            Class7Content,
+            Class8Content,
+            Class9Content
         },
         data() {
             return {
@@ -151,7 +153,8 @@
                 },
                 selectedOption: '',
                 startTime: new Date(),
-                timeSpentInSeconds: 0
+                timeSpentInSeconds: 0,
+                streak: 0 // New streak count property
             };
         },
         methods: {
@@ -174,6 +177,15 @@
                 const currentTime = new Date();
                 const difference = currentTime.getTime() - this.startTime.getTime();
                 this.timeSpentInSeconds = Math.floor(difference / 1000);
+
+                // Check if time spent is a multiple of 10 seconds
+                if (this.timeSpentInSeconds % 10 === 0) {
+                    // Increment streak count
+                    if (this.streak<=5)
+                    {
+                     this.streak++;
+                    }
+                }
             },
             formatTime(seconds) {
                 const hours = Math.floor(seconds / 3600);
@@ -187,9 +199,7 @@
             }
         },
         mounted() {
-
             setInterval(this.updateTimeSpent, 1000); // Update every second
-
         }
     };
 </script>

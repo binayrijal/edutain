@@ -12,6 +12,7 @@
     "axios": "^1.6.8",
     "core-js": "^3.8.3",
     "gsap": "^3.12.5",
+    "pdf-viewer-vue": "^0.2.7",
     "plotly.js": "^2.31.1",
     "stream-browserify": "^3.0.0",
     "three": "^0.163.0",

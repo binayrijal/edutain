@@ -1,45 +1,37 @@
-<!-- <template>
-    <div>
-      <h1>PDF Viewer</h1>
-      <embed :src="pdfUrl" type="application/pdf" width="100%" height="500px" />
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        pdfUrl: require('../assets/english_10.pdf') // Replace 'your-pdf-file.pdf' with the actual name of your PDF file
-      };
+<template>
+  <div>
+    <h1>File</h1>
+
+    <PDFViewer
+      :source="url"
+      style="height: 100vh; width: 100vw"
+      @download="handleDownload"
+    />
+
+    <h1>Base64</h1>
+
+    <PDFViewer
+      :source="base64"
+      style="height: 100vh; width: 100vw"
+      @download="handleDownload"
+    />
+  </div>
+</template>
+
+<script>
+import PDFViewer from 'pdf-viewer-vue'
+
+
+export default {
+  components: {
+    PDFViewer,
+  },
+
+  data() {
+    return {
+      url: 'src/assets/cv.pdf',
+      base64: '<BASE64_ENCODED_PDF>',
     }
-  };
-  </script>
-  
-  <style>
-  /* Add styles as needed */
-  </style> -->
-
-
-
-
-
-<!-- <template>
-    <div>
-      <h1>PDF Viewer</h1>
-      <iframe :src="pdfUrl" width="100%" height="500px"></iframe>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        pdfUrl: '../assets/english_10.pdf' // Set the URL of your PDF file
-      };
-    }
-  };
-  </script> -->
-  
-  <style>
-  /* Add styles as needed */
-  </style>
+  },
+}
+</script>

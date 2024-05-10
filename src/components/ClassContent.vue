@@ -58,7 +58,7 @@
                 if (item.title === 'Quiz') {
                 // Redirect to '/quiz-cont' or perform other actions
 
-                  this.$router.push('/quiz-cont');
+                  this.$router.push('/quiz-ten');
                 } else {
                 // Show other content or perform other actions
                   console.log('Selected item:', item);
