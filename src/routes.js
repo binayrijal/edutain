@@ -25,6 +25,8 @@ import EightYoutube from './components/EightYoutube.vue'
 import QuizSeven from './components/QuizSeven.vue'
 import QuizNine from './components/QuizNine.vue'
 import QuizEight from './components/QuizEight.vue'
+import FormulaCont from './components/FormulaCont.vue'
+import SummaryCont from './components/SummaryCont.vue'
 
 // import PdfCont from './components/PdfCont.vue'
 
@@ -159,6 +161,16 @@ const routes=[
         path:'/quiz-seven',
         name:'QuizSeven',
         component:QuizSeven
+    },
+    {
+        path:'/formula-cont',
+        name:'FormulaCont',
+        component:FormulaCont
+    },
+    {
+        path:'/summary-cont',
+        name:'SummaryCont',
+        component:SummaryCont
     }
     // {
     //     path: '/pdf-cont',

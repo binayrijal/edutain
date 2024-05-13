@@ -59,7 +59,15 @@
                     // Redirect to '/quiz-cont' or perform other actions
     
                       this.$router.push('/quiz-eight');
-                    } else {
+                    } 
+                    else if (item.title==='others'){
+                        this.$router.push('/formula-cont');
+                
+                    }
+                    
+                    
+                    
+                    else {
                     // Show other content or perform other actions
                       console.log('Selected item:', item);
                     }

@@ -41,7 +41,7 @@
                     },
                     {
                         title: 'others',
-                        content: 'Content for Div 4',
+                        content: 'Explore Others',
                         image: require('../assets/student-b.png')
                     },
                     
@@ -59,7 +59,13 @@
                 // Redirect to '/quiz-cont' or perform other actions
 
                   this.$router.push('/quiz-ten');
-                } else {
+                }
+                else if (item.title==='others'){
+                 this.$router.push('/formula-cont');
+                
+                }
+
+                else {
                 // Show other content or perform other actions
                   console.log('Selected item:', item);
                 }
