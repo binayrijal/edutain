@@ -1,5 +1,5 @@
 <template>
-    <div class="about-us">
+    <div class="about-us" id="aboutuspage">
       <!-- Team members section -->
       <div class="team-members">
         <div v-for="(member, index) in teamMembers" :key="index" class="member">
@@ -84,6 +84,7 @@
   
   .spoken-word {
     margin-top: 20px;
+    text-align: left;
   }
   
   button {

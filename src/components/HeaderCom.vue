@@ -4,7 +4,7 @@
       <nav class="nav">
         <router-link to="/" class="nav-item">Home</router-link>
         <router-link  to="/categories-comp" class="nav-item">Categories</router-link>
-        <a class="nav-item" href="#contactuspage">Contact Us</a>
+        <a class="nav-item" href="#aboutuspage">About Us</a>
         <router-link to="/piechart" class="nav-item">Draw</router-link>
         <router-link to="/dashboard-content" class="nav-item">Dashboard</router-link>
 

@@ -23,6 +23,8 @@ import AnimationVideo from './components/AnimationVideo.vue'
 import ChangePassword from './components/ChangePassword.vue'
 import EightYoutube from './components/EightYoutube.vue'
 import QuizSeven from './components/QuizSeven.vue'
+import QuizNine from './components/QuizNine.vue'
+import QuizEight from './components/QuizEight.vue'
 
 // import PdfCont from './components/PdfCont.vue'
 
@@ -122,6 +124,16 @@ const routes=[
         path: '/quiz-ten',
         name: 'QuizTen',
         component: QuizTen
+    },
+    {
+        path: '/quiz-nine',
+        name: 'QuizNine',
+        component: QuizNine
+    },
+    {
+        path: '/quiz-eight',
+        name: 'QuizEight',
+        component: QuizEight
     },
     {
         path: '/angle-cont',

@@ -2,8 +2,9 @@
 <div class="content-container">
     <div class="text-and-buttons">
         <p class="tagline"><i>Edutain Nepal:<br>:)<br>A Fun Paathsaala</i></p>
-        <router-link  to="/signup" class="nav-item">Register Now</router-link>
-        <router-link to="/login" class="nav-item">Login Now</router-link>
+        <a class="nav-item" href="https://moest.gov.np/" target="_blank">Explore Us</a>
+        <!-- <router-link to="/dm-us" class="nav-item">Contact Us</router-link> -->
+        <a class="nav-item" href="#contactuspage">Contact Us</a>
     </div>
     <div class="image-container">
         <img src="../assets/students.png" alt="Descriptive Alt Text">

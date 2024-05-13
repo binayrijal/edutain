@@ -1,4 +1,5 @@
 <template>
+    <HeaderCom></HeaderCom>
     <div>
       <h1>Quiz App</h1>
       <QuizReuse :questions="questions" @quiz-completed="handleQuizCompleted"></QuizReuse>
@@ -11,10 +12,12 @@
   
   <script>
   import QuizReuse from './QuizReuse.vue';
+  import HeaderCom from './HeaderCom.vue';
   
   export default {
     components: {
-      QuizReuse
+      QuizReuse,
+      HeaderCom
     },
     data() {
       return {

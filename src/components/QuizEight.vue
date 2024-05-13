@@ -12,7 +12,8 @@
   
   <script>
   import QuizReuse from './QuizReuse.vue';
-  import HeaderCom from './HeaderCom.vue'
+  import HeaderCom from './HeaderCom.vue';
+
   
   export default {
     components: {

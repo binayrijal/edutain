@@ -105,7 +105,7 @@
 
 <script>
 import HeaderCom from "./HeaderCom.vue";
-import axios from 'axios';
+// import axios from 'axios';
 import GreenBox from "./GreenBox.vue";
 import YellowSectionContent from "./YellowSectionContent.vue";
 import WhiteSectionContent from "./WhiteSectionContent.vue";
@@ -138,21 +138,21 @@ export default {
         });
         return;
       }
-      axios
-        .get("http://edutainnp.pythonanywhere.com/api/profile/", {
-          headers: {
-            Authorization: `Bearer ${authToken.access}`,
-          },
-        })
-        .then((response) => {
-          this.name = response.data.name; // Assuming the API returns an object with a 'name' field
-        })
-        .catch((error) => {
-          console.error("Error fetching user data:", error);
-          this.$router.push({
-            name: "signUp",
-          }); // Redirect to login on error (e.g., token expired)
-        });
+      // axios
+      //   .get("http://edutainnp.pythonanywhere.com/api/profile/", {
+      //     headers: {
+      //       Authorization: `Bearer ${authToken.access}`,
+      //     },
+      //   })
+      //   .then((response) => {
+      //     this.name = response.data.name; // Assuming the API returns an object with a 'name' field
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error fetching user data:", error);
+      //     this.$router.push({
+      //       name: "signUp",
+      //     }); // Redirect to login on error (e.g., token expired)
+      //   });
     },
   },
   mounted() {

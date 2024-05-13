@@ -99,6 +99,8 @@
       <GameCom v-else-if="selectedOption === 'game1'"></GameCom>
       <TikTok v-else-if="selectedOption === 'game2'"></TikTok>
       <AngleCont v-else-if="selectedOption === 'drawangle'"></AngleCont>
+      <Quiz1Cont v-else-if="selectedOption==='quiz1'"></Quiz1Cont>
+      <Quiz2Cont v-else-if="selectedOption==='quiz2'"></Quiz2Cont>
 
       <div v-else>
         <h1>{{ selectedOption }}</h1>
@@ -124,6 +126,8 @@
     import GameCom from './GameCom.vue';
     import TikTok from './TikTok';
     import AngleCont from './AngleCont.vue';
+    import Quiz2Cont from './Quiz2Cont.vue';
+    import Quiz1Cont from './Quiz1Cont.vue'
 
     export default {
         components: {
@@ -143,7 +147,9 @@
             AngleCont,
             Class7Content,
             Class8Content,
-            Class9Content
+            Class9Content,
+            Quiz2Cont,
+            Quiz1Cont
         },
         data() {
             return {
@@ -179,9 +185,9 @@
                 this.timeSpentInSeconds = Math.floor(difference / 1000);
 
                 // Check if time spent is a multiple of 10 seconds
-                if (this.timeSpentInSeconds % 10 === 0) {
+                if (this.timeSpentInSeconds % 3600 === 0) {
                     // Increment streak count
-                    if (this.streak<=5)
+                    if (this.streak<5)
                     {
                      this.streak++;
                     }
