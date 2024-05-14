@@ -219,7 +219,7 @@
   display: flex;
   flex-direction: column;
 
-  height: 100vh;
+  height: auto;
   border: 1px solid blue;
   width: 15%;
   background-color: #4a90e2;

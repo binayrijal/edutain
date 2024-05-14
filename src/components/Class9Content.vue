@@ -4,7 +4,7 @@
             <div class="item-image" :style="{ backgroundImage: 'url(' + item.image + ')' }"></div>
             <div class="item-content">
                 <h1>{{ item.title }}</h1>
-                <router-link to="/animation-video">{{ item.content }}</router-link>
+                <router-link to="/nine-youtube">{{ item.content }}</router-link>
              
             </div>
         </div>

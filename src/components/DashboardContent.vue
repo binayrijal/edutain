@@ -121,6 +121,7 @@
         width: 250px;
         background-color: #4A90E2;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: auto;
     }
 
     .logo {

@@ -12,11 +12,17 @@
   export default {
     data() {
       return {
-        videoUrls: [         
-          'https://www.youtube.com/embed/JqRl0cDBGeI',
-          'https://www.youtube.com/embed/GcAWYSc369w',
-          'https://www.youtube.com/embed/2BerWwuJmrg',
-        ]
+        videoUrls: [ 
+        'https://www.youtube.com/embed/-lgYPgpEXEs',
+        'https://www.youtube.com/embed/82EvWpWSogM',
+        'https://www.youtube.com/embed/HCbisGApCy4',
+        'https://www.youtube.com/embed/96lOJ-QwFsw',
+        'https://www.youtube.com/embed/U3AWs1nC5I4',
+        'https://www.youtube.com/embed/JqRl0cDBGeI',
+        'https://www.youtube.com/embed/GcAWYSc369w',
+        'https://www.youtube.com/embed/kr7f3MeAyOk'       
+       
+      ]
       };
     }
   };
