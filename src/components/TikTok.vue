@@ -100,12 +100,13 @@ export default {
 .container {
   background-color: rgb(236, 236, 236);
   padding: 20px;
-  margin-left: 250px;
+  margin-left: 350px;
   border-radius: 60px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  height: 40vh;
 }
 
 /* Styles for the title */
