@@ -107,6 +107,12 @@ export default {
   margin-top: 20px;
   margin-bottom: 20px;
   height: 40vh;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(198, 16, 16, 0.3);
 }
 
 /* Styles for the title */
