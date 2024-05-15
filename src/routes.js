@@ -31,7 +31,7 @@ import NineYoutube from './components/NineYoutube.vue'
 // import SevenYoutube from './components/EightYoutube.vue'
 import TenYoutube from './components/TenYoutube.vue'
 
-// import PdfCont from './components/PdfCont.vue'
+import PdfCont from './components/PdfCont.vue'
 
 const routes=[
     {
@@ -184,14 +184,15 @@ const routes=[
         path:'/summary-cont',
         name:'SummaryCont',
         component:SummaryCont
+    },
+     {
+        path: '/pdf',
+        name: 'PdfCont',
+        component:PdfCont
     }
-    // {
-    //     path: '/pdf-cont',
-    //     name: 'PdfCont',
-    //     component: PdfCont
-    // }
 
-    
+    // { path: '/pdf', component: PdfDisplay } 
+
 
 
 

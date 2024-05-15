@@ -10,6 +10,8 @@ export default {
 
 <style>
 #app {
+  
+  
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -109,6 +111,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.game-container
+ {
+  width: fit-content; /* Adjust width as needed */
+  margin-top: 20px; /* Add margin for spacing */
+}
 .did-floating-label-content {
   position: relative;
 }

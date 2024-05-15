@@ -11,65 +11,64 @@
 </div>
 </template>
 
-    
 <script>
 export default {
-    components: {
-
-    },
-    data() {
-        return {
-            items: [{
-                    title: 'Videos',
-                    content: 'START',
-                    image: require('../assets/student-anim.jpg')
-                },
-                {
-                    title: 'Quiz',
-                    content: 'Quiz material',
-                    image: require('../assets/student-marks.png')
-
-                },
-                {
-                    title: 'Material',
-                    content: 'Study material',
-                    image: require('../assets/student-a.png')
-                },
-                {
-                    title: 'others',
-                    content: 'Content for Div 4',
-                    image: require('../assets/student-b.png')
-                },
-
-            ],
-
-            selected: null,
-            quizScore: null
-        };
-    },
-    methods: {
-        selectItem(item) {
-            this.selected = item;
-            // Handle item selection
-            if (item.title === 'Quiz') {
-                // Redirect to '/quiz-cont' or perform other actions
-
-                this.$router.push('/quiz-seven');
-            } else if (item.title === 'others') {
-                this.$router.push('/formula-cont');
-
-            } else {
-                // Show other content or perform other actions
-                console.log('Selected item:', item);
-            }
+  components: {},
+  data() {
+    return {
+      items: [
+        {
+          title: 'Videos',
+          content: 'START',
+          image: require('../assets/student-anim.jpg')
         },
-        handleQuizCompleted(score) {
-            this.quizScore = score;
-        }
-
+        {
+          title: 'Quiz',
+          content: 'Quiz material',
+          image: require('../assets/student-marks.png')
+        },
+        {
+          title: 'Material',
+          content: 'Study material',
+          image: require('../assets/student-a.png')
+        },
+        {
+          title: 'others',
+          content: 'Content for Div 4',
+          image: require('../assets/student-b.png')
+        },
+      ],
+      selected: null,
+      quizScore: null
+    };
+  },
+  methods: {
+    selectItem(item) {
+      this.selected = item;
+      // Handle item selection
+      if (item.title === 'Quiz') {
+        // Redirect to '/quiz-cont' or perform other actions
+        this.$router.push('/quiz-seven');
+      } else if (item.title === 'Material') {
+        // Redirect to material PDF or perform other actions
+        window.open('/pdf', '_blank');
+      } else if (item.title === 'Videos') {
+        // Redirect to video page or perform other actions
+        this.$router.push('/animation-video');
+      } else if (item.title === 'others') {
+        this.$router.push('/formula-cont');
+      } else {
+        // Show other content or perform other actions
+        console.log('Selected item:', item);
+      }
+    },
+    handleQuizCompleted(score) {
+      this.quizScore = score;
     }
+  }
 };
 </script>
+
 
     
 <style scoped>

@@ -1,140 +1,168 @@
 <template>
+  <div class="game-container">
     <div class="container">
-      <h1>Tic Tac Toe</h1>
-      <div v-for="(row, rowIndex) in grid" :key="rowIndex" class="row">
-        <div
-          v-for="(cell, colIndex) in row"
-          :key="colIndex"
-          class="cell"
-          @click="makeMove(rowIndex, colIndex)"
-        >
-          {{ cell }}
-        </div>
+      <h1 class="title">Tic Tac Toe</h1>
+      <div class="grid-container">
+        <table class="grid">
+          <tr v-for="(row, rowIndex) in grid" :key="rowIndex">
+            <td v-for="(cell, colIndex) in row" :key="colIndex" class="cell" @click="makeMove(rowIndex, colIndex)">
+              {{ cell }}
+            </td>
+          </tr>
+        </table>
       </div>
-      <div v-if="winner" :class="{ winner: winner !== 'Draw', draw: winner === 'Draw' }">
-        Winner: {{ winner === 'X' ? 'Cross' : winner === 'O' ? 'Dot' : 'Draw' }}
-      </div>
-      <button :on-click="resetGame">Play Again</button>
+      <div v-if="winner" class="winner">Winner: {{ winner }}</div>
+      <button class="reset-button" @click="resetGame">Reset</button>
     </div>
-  </template>
-  
-  
-  <script>
-  import { reactive } from 'vue';
-  
-  export default {
-    setup() {
-      const initialState = {
-        grid: [
-          ['', '', ''],
-          ['', '', ''],
-          ['', '', '']
-        ],
-        currentPlayer: 'X',
-        winner: null
-      };
-  
-      const state = reactive({ ...initialState });
-  
-      const makeMove = (rowIndex, colIndex) => {
-        if (!state.grid[rowIndex][colIndex] && !state.winner) {
-          state.grid[rowIndex][colIndex] = state.currentPlayer;
-          if (checkWinner(rowIndex, colIndex)) {
-            state.winner = state.currentPlayer;
-            window.alert(`${state.currentPlayer} wins!`);
-          } else if (isDraw()) {
-            state.winner = 'Draw';
-            window.alert('Draw!');
-          } else {
-            state.currentPlayer = state.currentPlayer === 'X' ? 'O' : 'X';
-          }
+  </div>
+</template>
+
+<script>
+import { reactive } from 'vue';
+
+export default {
+  setup() {
+    const state = reactive({
+      grid: [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+      ],
+      currentPlayer: 'X',
+      winner: null
+    });
+
+    const makeMove = (rowIndex, colIndex) => {
+      if (!state.grid[rowIndex][colIndex] && !state.winner) {
+        state.grid[rowIndex][colIndex] = state.currentPlayer;
+        if (checkWinner(rowIndex, colIndex)) {
+          state.winner = state.currentPlayer;
+          window.alert(`Player ${state.currentPlayer} wins!`);
+          resetGame();
+        } else if (isDraw()) {
+          state.winner = 'Draw';
+          window.alert('It\'s a draw!');
+          resetGame();
+        } else {
+          state.currentPlayer = state.currentPlayer === 'X' ? 'O' : 'X';
         }
-      };
-  
-      const checkWinner = (rowIndex, colIndex) => {
-        const player = state.grid[rowIndex][colIndex];
-        // Check row
-        if (state.grid[rowIndex].every(cell => cell === player)) {
-          return true;
-        }
-        // Check column
-        if (state.grid.every(row => row[colIndex] === player)) {
-          return true;
-        }
-        // Check diagonals
-        if (rowIndex === colIndex && state.grid.every((row, i) => row[i] === player)) {
-          return true;
-        }
-        if (rowIndex + colIndex === 2 && state.grid.every((row, i) => row[2 - i] === player)) {
-          return true;
-        }
-        return false;
-      };
-  
-      const isDraw = () => {
-        return state.grid.every(row => row.every(cell => cell)) && !state.winner;
-      };
-  
-      const resetGame = () => {
-        Object.assign(state, { ...initialState });
-      };
-  
-      return {
-        grid: state.grid,
-        winner: state.winner,
-        makeMove,
-        isDraw,
-        resetGame
-      };
-    }
-  };
-  </script>
-  
-  <style scoped>
-  .container {
-    display: inline-block;
+      }
+    };
+
+    const checkWinner = (rowIndex, colIndex) => {
+      const player = state.grid[rowIndex][colIndex];
+      // Check row
+      if (state.grid[rowIndex].every(cell => cell === player)) {
+        return true;
+      }
+      // Check column
+      if (state.grid.every(row => row[colIndex] === player)) {
+        return true;
+      }
+      // Check diagonals
+      if (rowIndex === colIndex && state.grid.every((row, i) => row[i] === player)) {
+        return true;
+      }
+      if (rowIndex + colIndex === 2 && state.grid.every((row, i) => row[2 - i] === player)) {
+        return true;
+      }
+      return false;
+    };
+
+    const isDraw = () => {
+      return state.grid.every(row => row.every(cell => cell)) && !state.winner;
+    };
+
+    const resetGame = () => {
+      // Clear all cells in the grid
+      state.grid.forEach(row => {
+        row.fill('');
+      });
+      state.currentPlayer = 'X';
+      state.winner = null;
+    };
+
+    return {
+      grid: state.grid,
+      winner: state.winner,
+      makeMove,
+      resetGame
+    };
   }
-  
-  .row {
-    display: flex;
-    margin-left: 160px;
-  }
-  
-  .cell {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .winner {
-    margin-top: 10px;
-    font-weight: bold;
-    color: green;
-  }
-  
-  .draw {
-    margin-top: 10px;
-    font-weight: bold;
-    color: red;
-  }
-  
-  button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  </style>
-  
+};
+</script>
+
+<style scoped>
+/* Styles for the game container */
 
 
+/* Styles for the container */
+.container {
+  background-color: rgb(236, 236, 236);
+  padding: 20px;
+  margin-left: 250px;
+  border-radius: 60px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
+/* Styles for the title */
+.title {
+  font-size: 44px;
+  margin-top:0.1px;
+  margin-right:15px ;
+}
 
+/* Styles for the grid container */
+.grid-container {
+  margin-bottom: 20px;
+}
 
+/* Styles for the grid */
+.grid {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+/* Styles for the cells in the grid */
+.cell {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #333;
+  text-align: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hover effect for the cells in the grid */
+.cell:hover {
+  background-color: #bae75e;
+}
+
+/* Styles for the winner message */
+.winner {
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Styles for the reset button */
+.reset-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+/* Hover effect for the reset button */
+.reset-button:hover {
+  background-color: #0056b3;
+}
+</style>
