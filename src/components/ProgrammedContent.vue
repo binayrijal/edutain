@@ -33,6 +33,12 @@ export default {
   border-radius: 5px;
   text-align: center;
   background-color: #efd52d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+.box:hover{
+  transform: translateY(-25px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .box-image {

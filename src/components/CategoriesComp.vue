@@ -29,7 +29,7 @@
             iii.Draw Triangle
           </div>
           <div class="sub-menu-item" @click="selectOption('drawven')">
-            iii.Draw VenDiagram
+            iii.Draw VennDiagram
           </div>
           <div class="sub-menu-item" @click="selectOption('drawangle')">
             iv.Draw Angle

@@ -37,9 +37,8 @@
       <div class="content">
         <h1>Our Approaches</h1>
         <p>
-          This paragraph will describe the video content or relate to your
-          site's theme. Watch and learn more about our exciting educational
-          opportunities!
+          Watch and learn more about our exciting educational
+          opportunities! Everyone Can Learn with Edutain.
         </p>
       </div>
     </section>
@@ -58,8 +57,8 @@
         <div>
           <h1>Introducing:</h1>
           <WhiteSectionContent
-            :heading="'Edutain Nepal:A fun paathsaala'"
-            :text="'Explore Implement and Achieve'"
+            :heading="'Edutain Nepal:A Fun Paathshala'"
+            :text="'Explore, Implement and Achieve!!!'"
           ></WhiteSectionContent>
         </div>
       </div>
@@ -67,7 +66,7 @@
     <hr />
     <section class="section-white">
       <div class="content">
-        <h1>We Offered:</h1>
+        <h1 class="heading">We Offer:</h1>
         <div class="container">
           <ProgrammedContent
             title="Practical Skill Development"
@@ -235,7 +234,13 @@ section {
   font-size: 24px;
   animation: bounce 2s infinite;
 }
-
+.heading {
+  font-size: 2.5rem; /* Extra large font size */
+  margin-bottom: 20px; /* Add some space between the heading and the title */
+  color: #333; /* Custom color */
+  text-transform: uppercase; /* Transform text to uppercase */
+  font-weight: bold; /* Make the font bold */
+}
 .container {
   display: flex;
   justify-content: center;
@@ -304,7 +309,7 @@ section {
   align-items: center;
   justify-content: center;
   background-color: white;
-  color: rgb(0, 110, 255);
+  color: rgb(13, 14, 16);
   padding: 20px;
 }
 
@@ -370,4 +375,6 @@ section {
     /* Smaller font size for smaller devices */
   }
 }
+
+
 </style>
