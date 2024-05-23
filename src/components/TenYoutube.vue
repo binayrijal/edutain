@@ -20,7 +20,10 @@
         'https://www.youtube.com/embed/U3AWs1nC5I4',
         'https://www.youtube.com/embed/JqRl0cDBGeI',
         'https://www.youtube.com/embed/GcAWYSc369w',
-        'https://www.youtube.com/embed/kr7f3MeAyOk'       
+        'https://www.youtube.com/embed/kr7f3MeAyOk' ,
+        'https://www.youtube.com/embed/_STgFkHTaBQ' ,
+        'https://www.youtube.com/embed/dzGT6BCLHHc' ,
+        'https://www.youtube.com/embed/vid6hyL7gBg'    
        
       ]
       };

@@ -190,6 +190,10 @@
                     if (this.streak<5)
                     {
                      this.streak++;
+                     this.streakIncreased = true; // Set flag to true
+          setTimeout(() => {
+            this.streakIncreased = false; // Reset flag after 1 second
+          }, 1000);
                     }
                 }
             },
@@ -262,4 +266,6 @@
   padding: 10px;
   height: 100vh;
 }
+
+
 </style>

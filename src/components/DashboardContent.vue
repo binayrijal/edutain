@@ -20,6 +20,16 @@
         </nav>
     </div>
     <div class="main-content">
+        <div class="landing-page" v-if="!showContent">
+        <!-- Landing page content -->
+        <div class="landing-page-text">
+  <p>Welcome to the Dashboard!</p>
+  <p>Select an option from the menu to get started.</p>
+        </div>
+
+        <img src="../assets/landing-page-image.png" alt="Landing Page Image" class="landing-page-image">
+       
+        </div>
         <div v-if="showProgressReport">
           <ProgressReport :quizScore="quizScore" />
       </div>
@@ -46,7 +56,8 @@
                 email: '',
                 // startTime: new Date(),
                 // timeSpentInSeconds: 0
-                showProgressReport:false
+                showProgressReport:false,
+                showContent :false,
             };
         },
         // mounted() {
@@ -98,6 +109,10 @@
             // pad(number) {
             //     return (number < 10 ? "0" : "") + number;
             // }
+            generateProgressReport() {
+      this.showProgressReport = true;
+      this.showContent = false; // Hide landing page content when progress report is generated
+    }
         },
         mounted() {
             this.fetchUserData(); // Call fetchUserData when component mounts
@@ -196,6 +211,47 @@
             /* Center-align nav items */
         }
     }
+
+    .landing-page-image {
+  width: calc(100% - 250px); /* Adjust the width based on your layout */
+  max-width: 100%; /* Ensure the image does not exceed its container */
+  height: auto;
+  border-radius: 2px; /* Maintain aspect ratio */
+}
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .landing-page-content {
+    border: 2px solid #ccc; /* Border around the image */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+ 
+
+  .landing-page-text {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 0px;
+    font-style:italic;
+    transition: color 0.3s;
+  }
+
+  .landing-page-text:hover {
+  color: #4A90E2; /* Change color on hover */
+}
+.landing-page-text p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 </style>
 
 
