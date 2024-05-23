@@ -172,4 +172,33 @@ export default {
 .reset-button:hover {
   background-color: #0056b3;
 }
+
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .cell {
+    width: 20vw;
+    height: 20vw;
+    font-size: 7vw;
+    line-height: 20vw;
+  }
+
+  .winner {
+    font-size: 1.2rem;
+  }
+
+  .reset-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
 </style>

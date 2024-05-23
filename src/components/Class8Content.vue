@@ -60,6 +60,9 @@
     
                       this.$router.push('/quiz-eight');
                     } 
+
+                    else if(item.title=='Material')
+                    this.$router.push('/Pdf');
                     else if (item.title==='others'){
                         this.$router.push('/formula-cont');
                 

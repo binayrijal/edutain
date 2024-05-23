@@ -1,7 +1,7 @@
 <template>
 <HeaderCom></HeaderCom>
 <div>
-    <h1>Quiz App</h1>
+    <h1>Quiz Time</h1>
     <QuizReuse :questions="questions" @quiz-completed="handleQuizCompleted"></QuizReuse>
     <div v-if="quizCompleted">
         <h2>Quiz Completed!</h2>
@@ -348,5 +348,51 @@ export default {
 
   
 <style>
-/* Add your styles here */
+
+.quiz-app-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: #c4cf30;
+    transition: 0.3s ease;
+}
+
+.quiz-app-container:hover {
+    background-color: #f0f0f0; /* Change to your desired background color */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.quiz-completed {
+    margin-top: 30px;
+}
+
+.quiz-completed h2 {
+    color: #4CAF50;
+    font-size: 1.5em;
+}
+
+.quiz-completed p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Hover effect for buttons */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
 </style>
