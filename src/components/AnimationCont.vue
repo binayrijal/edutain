@@ -25,7 +25,7 @@ export default {
         { src: require('../assets/Magnetism.mp4') , title: 'Magnetism'},
         { src: require('../assets/Mitosis_Cell_reproduction_Class_8.mp4'), title: 'Mitosis_Cell_reproduction' },
         { src: require('../assets/Newtons_Laws_of_Motion_.mp4') , title: 'Newtons_Laws_of_Motion_'},
-        { src: require('../assets/Newtons_Laws_of_Motion_.mp4') , title: 'Newtons_Laws_of_Motion_'},
+        
         // Add more video objects as needed
       ]
     };

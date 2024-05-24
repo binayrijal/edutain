@@ -72,22 +72,22 @@
     data() {
       return {
         videoUrls: [
-          { title: 'Introduction to Vue.js', url: 'https://www.youtube.com/embed/-lgYPgpEXEs' },
-          { title: 'Vue.js Components', url: 'https://www.youtube.com/embed/82EvWpWSogM' },
-          { title: 'Vue Router Basics', url: 'https://www.youtube.com/embed/HCbisGApCy4' },
-          { title: 'State Management with Vuex', url: 'https://www.youtube.com/embed/96lOJ-QwFsw' },
-          { title: 'Advanced Vue.js Techniques', url: 'https://www.youtube.com/embed/U3AWs1nC5I4' },
-          { title: 'Vue.js and Firebase', url: 'https://www.youtube.com/embed/JqRl0cDBGeI' },
-          { title: 'Deploying Vue.js Applications', url: 'https://www.youtube.com/embed/GcAWYSc369w' },
-          { title: 'Testing Vue.js Applications', url: 'https://www.youtube.com/embed/kr7f3MeAyOk' },
-          { title: 'Composition API in Vue 3', url: 'https://www.youtube.com/embed/_STgFkHTaBQ' },
-          { title: 'Vue.js Performance Optimization', url: 'https://www.youtube.com/embed/dzGT6BCLHHc' },
-          { title: 'Building Real-time Apps with Vue', url: 'https://www.youtube.com/embed/vid6hyL7gBg' }
+          { title: 'Solar System part1', url: 'https://www.youtube.com/embed/-lgYPgpEXEs' },
+          { title: 'Solar System Part2', url: 'https://www.youtube.com/embed/82EvWpWSogM' },
+          { title: 'Newtons Law', url: 'https://www.youtube.com/embed/HCbisGApCy4' },
+          { title: 'Electricity', url: 'https://www.youtube.com/embed/96lOJ-QwFsw' },
+          { title: 'Magnetism', url: 'https://www.youtube.com/embed/U3AWs1nC5I4' },
+          { title: 'Coin and Feature Experiment', url: 'https://www.youtube.com/embed/JqRl0cDBGeI' },
+          { title: 'Universal Law of Motion', url: 'https://www.youtube.com/embed/GcAWYSc369w' },
+          { title: 'Human Eye', url: 'https://www.youtube.com/embed/kr7f3MeAyOk' },
+          { title: 'Trigonometry', url: 'https://www.youtube.com/embed/_STgFkHTaBQ' },
+          { title: 'Mathematical Construct', url: 'https://www.youtube.com/embed/dzGT6BCLHHc' },
+          { title: 'Probability', url: 'https://www.youtube.com/embed/vid6hyL7gBg' }
         ],
         buttonColors: [
-          '#FF5733', '#33FF57', '#3357FF', '#FF33A1', 
-          '#FF8C33', '#8C33FF', '#33FFF3', '#FF3333', 
-          '#33FF8C', '#FF33FF', '#3333FF'
+          '#3333FF', '#3333FF', '#3333FF', '#3333FF', 
+          '#3333FF', '#3333FF', '#3333FF', '#3333FF', 
+          '#3333FF', '#3333FF', '#3333FF'
         ],
         selectedVideoUrl: null
       };
@@ -99,14 +99,105 @@
     }
   };
   </script>
-  
-  <style scoped>
+
+<style scoped>
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Display 5 items per row */
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-items: center; /* Center the buttons horizontally */
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.selected-video-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.youtube-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
   .button-container {
-    display: flex;
-    flex-direction: column; /* Arrange buttons vertically */
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .button-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .youtube-container {
+    padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    grid-template-columns: 1fr; /* 1 item per row */
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .youtube-container {
+    padding-bottom: 100%; /* Adjust aspect ratio for very small screens */
+  }
+}
+</style>
+  
+  <!-- <style scoped>
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Display 5 items per row */
+    gap: 5px;
     margin-bottom: 20px;
-    align-items: center; /* Center the buttons horizontally */
+    justify-items: center; /* Center the buttons horizontally */
   }
   
   button {
@@ -142,5 +233,13 @@
     width: 100%;
     height: 100%;
   }
-  </style>
+  .tabs{
+    display:grid;
+  }
+  </style> -->
+
+
+  
+
+  
   
