@@ -23,48 +23,6 @@
       return {
         questions: [
           
-          {
-            question: "What is the value of pi (π) approximately?",
-            options: ["3.14", "2.71", "1.618", "1.414"],
-            answerIndex: 0,
-            userAnswerCorrect: null
-          },
-          {
-                            question: "What is a constellation?",
-                            options: ["A group of stars forming a pattern", "A type of galaxy", "A planet and its moons", "A cluster of asteroids"],
-                            answerIndex: 0,
-                            userAnswerCorrect: null
-                        },
-                        {
-                            question: "What is the process by which a star converts hydrogen into helium?",
-                            options: ["Fusion", "Fission", "Convection", "Radiation"],
-                            answerIndex: 0,
-                            userAnswerCorrect: null
-                        },
-                        {
-                            question: "What is the name of the galaxy that contains our solar system?",
-                            options: ["Milky Way", "Andromeda", "Triangulum", "Orion"],
-                            answerIndex: 0,
-                            userAnswerCorrect: null
-                        },
-                        {
-                            question: "What is the name of the phenomenon where light bends as it passes through a lens?",
-                            options: ["Refraction", "Reflection", "Dispersion", "Diffraction"],
-                            answerIndex: 0,
-                            userAnswerCorrect: null
-                        },
-                        {
-                            question: "What is the name of the imaginary line around which the Earth rotates?",
-                            options: ["Axis", "Equator", "Meridian", "Tropic of Cancer"],
-                            answerIndex: 0,
-                            userAnswerCorrect: null
-                        },
-                        {
-                            question: "What is the study of celestial objects such as stars, planets, and galaxies called?",
-                            options: ["Astronomy", "Geology", "Botany", "Meteorology"],
-                            answerIndex: 0,
-                            userAnswerCorrect: null
-                        },
                         {
                             question: "What is the name of the phenomenon where the Moon partially or completely covers the Sun?",
                             options: ["Solar eclipse", "Lunar eclipse", "Halley's comet", "Asteroid belt"],
@@ -158,6 +116,49 @@
                          {
                             question: "What is the unit of electric current?",
                             options: ["Ampere", "Ohm", "Volt", "Watt"],
+                            answerIndex: 0,
+                            userAnswerCorrect: null
+                        },
+                        
+          {
+            question: "What is the value of pi (π) approximately?",
+            options: ["3.14", "2.71", "1.618", "1.414"],
+            answerIndex: 0,
+            userAnswerCorrect: null
+          },
+          {
+                            question: "What is a constellation?",
+                            options: ["A group of stars forming a pattern", "A type of galaxy", "A planet and its moons", "A cluster of asteroids"],
+                            answerIndex: 0,
+                            userAnswerCorrect: null
+                        },
+                        {
+                            question: "What is the process by which a star converts hydrogen into helium?",
+                            options: ["Fusion", "Fission", "Convection", "Radiation"],
+                            answerIndex: 0,
+                            userAnswerCorrect: null
+                        },
+                        {
+                            question: "What is the name of the galaxy that contains our solar system?",
+                            options: ["Milky Way", "Andromeda", "Triangulum", "Orion"],
+                            answerIndex: 0,
+                            userAnswerCorrect: null
+                        },
+                        {
+                            question: "What is the name of the phenomenon where light bends as it passes through a lens?",
+                            options: ["Refraction", "Reflection", "Dispersion", "Diffraction"],
+                            answerIndex: 0,
+                            userAnswerCorrect: null
+                        },
+                        {
+                            question: "What is the name of the imaginary line around which the Earth rotates?",
+                            options: ["Axis", "Equator", "Meridian", "Tropic of Cancer"],
+                            answerIndex: 0,
+                            userAnswerCorrect: null
+                        },
+                        {
+                            question: "What is the study of celestial objects such as stars, planets, and galaxies called?",
+                            options: ["Astronomy", "Geology", "Botany", "Meteorology"],
                             answerIndex: 0,
                             userAnswerCorrect: null
                         },
