@@ -1,6 +1,6 @@
 <template>
   <div><h2>Class 7 Animated Videos</h2>
-    <HeaderCom></HeaderCom>
+    
     <div class="button-container">
       <button
         v-for="(video, index) in videos"
@@ -30,11 +30,11 @@
 </template>
 
 <script>
-import HeaderCom from './HeaderCom.vue';
+
 
 export default {
   components: {
-    HeaderCom,
+   
   },
   data() {
     return {
