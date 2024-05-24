@@ -1,5 +1,6 @@
 <template>
     <div>
+      <h2>Class 9 Animated Videos</h2>
       <div class="button-container">
         <button 
           v-for="(video, index) in videoUrls" 

@@ -51,7 +51,7 @@
   </style> -->
 
   <template>
-    <div>
+    <div><h2>Class 10 Animated Videos</h2>
       <div class="button-container">
         <button 
           v-for="(video, index) in videoUrls" 
