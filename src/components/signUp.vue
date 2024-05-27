@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="register container" style="margin-top: 80px;">
     <img src="../assets/Emblem_of_Nepal.svg (1).png" />
     <h3 style="color: black">Welcome to Edutain Nepal!</h3>
@@ -33,7 +33,6 @@
         >Password <span style="color: red">*</span>
       </label>
     </div>
-
     <div class="did-floating-label-content">
       <input
         type="password"
@@ -45,7 +44,6 @@
         >Re-enter Password <span style="color: red">*</span>
       </label>
     </div>
-
     <button class="submit" v-on:click="signup()">Sign-Up</button>
     <div
       style="
@@ -79,19 +77,7 @@ export default {
   },
   methods: {
     async signup() {
-      // console.warn('signup',this.name,this.email,this.password)
-      // let value= await axios.post("http://localhost:3000/user",{
-      //     name:this.name,
-      //     email:this.email,
-      //     password:this.password
-      // })
-      // if(value.status==201)
-      // {
-
-      //     localStorage.setItem("user-value",JSON.stringify(value.data))
-      //     this.$router.push({name:'HomePage'})
-
-      // }
+      console.log("Signup method called"); // Add this line
       try {
         let value = await axios.post("https://edunp.pythonanywhere.com/api/register/", {
           name: this.name,
@@ -105,15 +91,14 @@ export default {
             email: value.data.email,
           };
           localStorage.setItem("user-value", JSON.stringify(userdata.data));
-          (this.name = ""),
-            (this.email = ""),
-            (this.password = ""),
-            (this.password2 = "");
-          alert("Registration successfull!login now:");
+          this.name = "";
+          this.email = "";
+          this.password = "";
+          this.password2 = "";
+          alert("Registration successful! Login now:");
         }
       } catch (error) {
         console.error("Registration failed:", error);
-        // Optionally, handle errors, e.g., display error message
         alert("Registration failed. Please try again.");
       }
     },
