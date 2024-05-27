@@ -78,7 +78,7 @@ export default {
     };
   },
   methods: {
-    async singup() {
+    async signup() {
       // console.warn('signup',this.name,this.email,this.password)
       // let value= await axios.post("http://localhost:3000/user",{
       //     name:this.name,
@@ -93,7 +93,7 @@ export default {
 
       // }
       try {
-        let value = await axios.post("https://edunp.anywhere.com/api/register/", {
+        let value = await axios.post("https://edunp.pythonanywhere.com/api/register/", {
           name: this.name,
           email: this.email,
           password: this.password,
