@@ -57,7 +57,7 @@ export default {
     async login() {
 
       try {
-        let value = await axios.post("http://edutainnp.pythonanywhere.com/api/login/", {
+        let value = await axios.post("http://edunp.pythonanywhere.com/api/login/", {
           email: this.email,
           password: this.password,
         });

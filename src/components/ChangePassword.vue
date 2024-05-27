@@ -30,7 +30,7 @@
         const accessToken = JSON.parse(localStorage.getItem("user-value"));
         try {
           const response = await axios.post(
-            'http://edutainnp.pythonanywhere.com/api/changepassword/',
+            'http://edunp.pythonanywhere.com/api/changepassword/',
             { 
                 password: this.password, 
                 password2: this.password2 

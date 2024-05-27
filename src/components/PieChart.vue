@@ -30,7 +30,7 @@ export default {
         labels: this.labels,
         sizes: this.sizes
       };
-      fetch('http://edutainnp.pythonanywhere.com/api/pie-chart/', {
+      fetch('http://edunp.pythonanywhere.com/api/pie-chart/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

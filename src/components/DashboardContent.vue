@@ -78,7 +78,7 @@
                     });
                     return;
                 }
-                axios.get('http://edutainnp.pythonanywhere.com/api/profile/', {
+                axios.get('http://edunp.pythonanywhere.com/api/profile/', {
                         headers: {
                             'Authorization': `Bearer ${authToken.access}`
                         }
