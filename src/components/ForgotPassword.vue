@@ -35,7 +35,7 @@ export default {
     async sendResetEmail() {
       try {
         await axios.post(
-          "http://edutainnp.pythonanywhere.com/api/send-mail-reset-password/",
+          "https://edunp.pythonanywhere.com/api/send-mail-reset-password/",
           {
             email: this.email,
           }
