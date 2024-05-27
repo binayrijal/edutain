@@ -46,7 +46,7 @@
       </label>
     </div>
 
-    <button class="submit" v-on:click="singup()">Sign-Up</button>
+    <button class="submit" v-on:click="signup()">Sign-Up</button>
     <div
       style="
         font-size: xx-small;
