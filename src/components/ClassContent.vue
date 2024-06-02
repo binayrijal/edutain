@@ -41,7 +41,7 @@
                     },
                     {
                         title: 'others',
-                        content: 'Explore Others',
+                        content: 'Important Subject-wise formulae',
                         image: require('../assets/student-b.png')
                     },
                     

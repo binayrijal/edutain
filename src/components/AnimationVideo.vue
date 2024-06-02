@@ -39,6 +39,8 @@ export default {
   data() {
     return {
       videos: [
+        { title: 'Forces and Distance', url: 'https://www.youtube.com/embed/x9iPQSflKRU' },
+        { title: 'Matter', url: 'https://www.youtube.com/embed/qEZ9-fpj3ZQ' },
         { title: 'Class 7 Mathematical Constructions', src: 'https://www.youtube.com/embed/dzGT6BCLHHc', type: 'youtube' },
         { title: 'Class 7 Energy Introduction', src: 'https://www.youtube.com/embed/8H_CAQTMHV0', type: 'youtube' },
         { title: 'Edutain’s Astronomy Class 7', src: 'https://www.youtube.com/embed/vOjh-9aDa4o', type: 'youtube' },
@@ -46,6 +48,8 @@ export default {
         { title: 'Energy Types2', src: 'https://www.youtube.com/embed/BfjqBarl24I', type: 'youtube' },
         { title: 'Energy Types1', src: 'https://www.youtube.com/embed/82XQrj8lAjI', type: 'youtube' },
         { title: 'Simple Machine', src: 'https://www.youtube.com/embed/zRJtXkHil2o', type: 'youtube' },
+        { title: 'Classification of organisms', url: 'https://www.youtube.com/embed/ToEq_VO4bXM' },
+
       ],
       buttonColor: '#3333FF',
       selectedVideoIndex: null,

@@ -41,7 +41,7 @@
                         },
                         {
                             title: 'others',
-                            content: 'Content for Div 4',
+                            content: 'Important Subject-wise fromulae',
                             image: require('../assets/student-b.png')
                         },
                         

@@ -21,16 +21,16 @@
     data() {
       return {
         videoUrls: [
-          { title: 'Solar System part1', url: 'https://www.youtube.com/embed/-lgYPgpEXEs' },
-          { title: 'Solar System Part2', url: 'https://www.youtube.com/embed/82EvWpWSogM' },
+        { title: 'Forces and Distance', url: 'https://www.youtube.com/embed/x9iPQSflKRU' },
+        { title: 'Matter', url: 'https://www.youtube.com/embed/qEZ9-fpj3ZQ' },
           { title: 'Newtons Law', url: 'https://www.youtube.com/embed/HCbisGApCy4' },
           { title: 'Electricity', url: 'https://www.youtube.com/embed/96lOJ-QwFsw' },
           { title: 'Magnetism', url: 'https://www.youtube.com/embed/U3AWs1nC5I4' },
-          { title: 'Coin and Feature Experiment', url: 'https://www.youtube.com/embed/JqRl0cDBGeI' },
+          { title: 'Classification of organisms', url: 'https://www.youtube.com/embed/ToEq_VO4bXM' },
           { title: 'Universal Law of Motion', url: 'https://www.youtube.com/embed/GcAWYSc369w' },
           { title: 'Human Eye', url: 'https://www.youtube.com/embed/GcAWYSc369w' },
           { title: 'Trigonometry', url: 'https://www.youtube.com/embed/_STgFkHTaBQ' },
-          { title: 'Mathematical Construct', url: 'https://www.youtube.com/embed/_STgFkHTaBQ' },
+          { title: 'Mathematical Construction', url: 'https://www.youtube.com/embed/_STgFkHTaBQ' },
           { title: 'Probability', url: 'https://www.youtube.com/embed/vid6hyL7gBg' }
         ],
         buttonColors: [
